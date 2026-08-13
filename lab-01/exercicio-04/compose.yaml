@@ -1,0 +1,10 @@
+services:
+  redis:
+    image: redis:alpine
+  
+  webapp:
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app:/app172.18.219.83

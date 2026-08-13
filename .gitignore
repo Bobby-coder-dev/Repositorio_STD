@@ -53,3 +53,61 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pytype/
+*.egg-info/
+dist/
+build/
+site/
+
+# Docker
+.docker/
+.env
+.env.*
+!.env.example
+docker-compose.override.yml
+*.tar
+
+# YAML / config
+# YAML manifests usually should be versioned; ignore only local/generated secret files.
+*.secret.yaml
+*.secret.yml
+*.yaml~
+*.yml~
+
+# Java
+*.class
+*.log
+hs_err_pid*
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+*.jmod
+target/
+out/
+build/
+.gradle/
+.idea/
+*.iml
