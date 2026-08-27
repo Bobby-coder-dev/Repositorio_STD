@@ -98,6 +98,7 @@ docker-compose.override.yml
 *.log
 hs_err_pid*
 *.jar
+!**/gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
 *.nar

@@ -17,17 +17,13 @@ public class App {
             IO.println("Aguardando por conexões...");
 
             while(!Thread.currentThread().isInterrupted()) {
-                var clientSocket = serverSocket.accept(); // Esperando IO
-                new Thread(new AtenderClientes(clientSocket)).start();
+                Socket clientSocket = serverSocket.accept(); // Esperando IO
+                Thread.ofVirtual().start(new AtenderClientes(clientSocket));
             }
 
         } catch (Exception e) {
-
             System.err.println("Erro: " + e);
-
         }
-
-
         //serverSocket.close(); -- Obrigação de fechar a porta depois de terminada a conexão
     }
 }
